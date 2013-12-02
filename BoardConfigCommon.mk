@@ -127,7 +127,7 @@ USE_DEVICE_SPECIFIC_CAMERA:= true
 
 HAVE_ADRENO_SOURCE:= false
 
-TARGET_SEPOLICY_FLO := true
+TARGET_SEPOLICY_NEW := true
 
 BOARD_SEPOLICY_DIRS += device/asus/flo/sepolicy
 
