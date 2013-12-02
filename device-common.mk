@@ -291,7 +291,7 @@ PRODUCT_PACKAGES += \
     Tag
 
 # QRNGD
-PRODUCT_PACKAGES += qrngd
+#PRODUCT_PACKAGES += qrngd
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
