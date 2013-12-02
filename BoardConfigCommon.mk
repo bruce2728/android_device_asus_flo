@@ -127,6 +127,35 @@ USE_DEVICE_SPECIFIC_CAMERA:= true
 
 HAVE_ADRENO_SOURCE:= false
 
+TARGET_SEPOLICY_FLO := true
+
+BOARD_SEPOLICY_DIRS += device/asus/flo/sepolicy
+
+# The list below is order dependent
+BOARD_SEPOLICY_UNION += \
+        app.te \
+        bluetooth_loader.te \
+        bridge.te \
+        camera.te \
+        conn_init.te \
+        device.te \
+        file.te \
+        file_contexts \
+        kickstart.te \
+        mediaserver.te \
+        mpdecision.te \
+        netmgrd.te \
+        ppd.te \
+        qmux.te \
+        rmt.te \
+        sensors.te \
+        surfaceflinger.te \
+        system_server.te \
+        tee.te \
+        te_macros \
+        thermald.te \
+        ueventd.te
+
 # Required for CWM Recovery
 RECOVERY_FSTAB_VERSION := 2
 BOARD_HAS_NO_SELECT_BUTTON := true
