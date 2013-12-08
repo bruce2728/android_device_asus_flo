@@ -166,4 +166,7 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
+PRODUCT_COPY_FILES := \
+    device/asus/flo/99kernel:system/etc/init.d/99kernel
+
 -include vendor/asus/flo/BoardConfigVendor.mk
