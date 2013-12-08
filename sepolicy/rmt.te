@@ -7,3 +7,6 @@ init_daemon_domain(rmt)
 
 permissive rmt;
 unconfined_domain(rmt)
+
+# Otherwise will overflow logs
+dontaudit rmt kmem_device:chr_file rw_file_perms;
