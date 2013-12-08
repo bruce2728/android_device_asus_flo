@@ -1,3 +1,5 @@
+#Uncomment this for odex
+#WITH_DEXPREOPT := true
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920

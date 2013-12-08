@@ -26,8 +26,5 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/asus/flo
 
 TARGET_RECOVERY_FSTAB = device/asus/flo/recovery.fstab
 
-# Uncomment the following line to build odexed.
-#WITH_DEXPREOPT := true
-
 -include vendor/asus/flo/BoardConfigVendor.mk
 include device/asus/flo/BoardConfigCommon.mk
