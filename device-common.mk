@@ -56,7 +56,8 @@ PRODUCT_COPY_FILES += \
 	device/asus/flo/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
 	device/asus/flo/WCNSS_qcom_wlan_nv_flo.bin:system/etc/wifi/WCNSS_qcom_wlan_nv_flo.bin \
 	device/asus/flo/WCNSS_qcom_wlan_nv_deb.bin:system/etc/wifi/WCNSS_qcom_wlan_nv_deb.bin \
-	device/asus/flo/init.flo.wifi.sh:system/etc/init.flo.wifi.sh
+	device/asus/flo/init.flo.wifi.sh:system/etc/init.flo.wifi.sh \
+	device/asus/flo/modules/kcontrol_gpu_msm.ko:system/lib/modules/kcontrol_gpu_msm.ko
 
 PRODUCT_COPY_FILES += \
 	device/asus/flo/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
@@ -298,6 +299,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     device/asus/flo/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     device/asus/flo/nfc/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf
+
+PRODUCT_COPY_FILES += \
+    device/asus/flo/99kernel:system/etc/init.d/99kernel
 
 PRODUCT_LOCALES := en_US es_US de_DE zh_CN
 

@@ -48,8 +48,8 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=flo user_
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
 # Try to build the kernel
-TARGET_KERNEL_SOURCE := kernel/google/msm-flo
-TARGET_KERNEL_CONFIG := flo_defconfig
+TARGET_KERNEL_SOURCE := kernel/google/bricked-flo-master
+TARGET_KERNEL_CONFIG := bricked_defconfig
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
@@ -165,8 +165,5 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 # Webkit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
-
-PRODUCT_COPY_FILES := \
-    device/asus/flo/99kernel:system/etc/init.d/99kernel
 
 -include vendor/asus/flo/BoardConfigVendor.mk
