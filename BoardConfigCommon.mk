@@ -66,7 +66,8 @@ TARGET_BOARD_PLATFORM := msm8960
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/asus/flo/bluetooth
 
 # Use the CM PowerHAL
-TARGET_USES_CM_POWERHAL := true
+TARGET_USES_CM_POWERHAL := false
+TARGET_POWERHAL_NO_TOUCH_BOOST := true
 
 # FIXME: HOSTAPD-derived wifi driver
 BOARD_HAS_QCOM_WLAN := true
@@ -103,7 +104,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 BOARD_USES_SECURE_SERVICES := true
 
-
 USE_CAMERA_STUB := false
 BOARD_USES_CAMERA_FAST_AUTOFOCUS := false
 
@@ -126,35 +126,6 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_DEVICE_SPECIFIC_CAMERA:= true
 
 HAVE_ADRENO_SOURCE:= false
-
-TARGET_SEPOLICY_NEW := true
-
-BOARD_SEPOLICY_DIRS += device/asus/flo/sepolicy
-
-# The list below is order dependent
-BOARD_SEPOLICY_UNION += \
-        app.te \
-        bluetooth_loader.te \
-        bridge.te \
-        camera.te \
-        conn_init.te \
-        device.te \
-        file.te \
-        file_contexts \
-        kickstart.te \
-        mediaserver.te \
-        mpdecision.te \
-        netmgrd.te \
-        ppd.te \
-        qmux.te \
-        rmt.te \
-        sensors.te \
-        surfaceflinger.te \
-        system_server.te \
-        tee.te \
-        te_macros \
-        thermald.te \
-        ueventd.te
 
 # Required for CWM Recovery
 RECOVERY_FSTAB_VERSION := 2
