@@ -166,4 +166,6 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
+BOARD_HARDWARE_CLASS := device/asus/flo/cmhw/
+
 -include vendor/asus/flo/BoardConfigVendor.mk
