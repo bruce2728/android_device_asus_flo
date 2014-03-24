@@ -10,13 +10,29 @@ SWEEP2WAKE=0
 # possible values:
 # 0 = off
 # 1 = on
-DOUBLETAP2WAKE=0
+DOUBLETAP2WAKE=1
 
-# Sweep2Wake_Sweep2SleepOnly
+# Sweep2Wake_Sweep2SleepOnly (Needs s2w to be set to 1)
 # possible values:
 # 0 = off
 # 1 = on
 SWEEP2SLEEP=0
+
+# Battery voltage (set lower voltage to extend battery cycle life)
+# possible values:
+# 3800 = 3.8v -> ?
+# 3900 = 3.9v -> ?
+# 4000 = 4.0v -> 75% charge
+# 4100 = 4.1v -> 85% charge
+# 4200 = 4.2v -> 95% charge
+# 4300 = 4.3V -> 100% charge
+BATT_VOLT=4300
+
+# Magnetic on/off
+# possible values:
+# 0 = off
+# 1 = on
+LID=0
 
 ### DO NOT CHANGE ANYTHING BELLOW THIS LINE! ###
 
@@ -28,3 +44,9 @@ echo ${DOUBLETAP2WAKE} > /sys/android_touch/doubletap2wake
 
 $L "setting Sweep2Wake_Sweep2SleepOnly to ${SWEEP2SLEEP}"
 echo ${SWEEP2SLEEP} > /sys/android_touch/s2w_s2sonly
+
+$L "setting battery voltage to ${BATT_VOLT}mv"
+echo ${BATT_VOLT} > /sys/devices/i2c-0/0-006a/float_voltage
+
+$L "setting Magnetic lid to ${LID}"
+echo ${LID} > /sys/module/lid/parameters/enable_lid
